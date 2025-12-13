@@ -1,0 +1,5 @@
+p = float(input("Начальная сумма вклада: "))
+r = float(input())
+t = float(input())
+percentage = round((p*r*t)/100,1)
+print(f"P={p}, R={r}, T={t}, percent={percentage}")
