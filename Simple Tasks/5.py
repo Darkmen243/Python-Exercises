@@ -20,3 +20,5 @@ str2 = str [-4:]
 print(f"{str1}\n{str2}")
 str = "123"
 print("-".join(str))
+welcome = "Hello {:s}"
+print(welcome)

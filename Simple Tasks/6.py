@@ -8,7 +8,6 @@ print(current_time.hour, ":", current_time.minute, ":", current_time.second)
 
 '''
 Выведите на консоль текущую дату - день, месяц и год в следующем виде:
-
 День:  16
 Месяц:  1
 Год:  2024
