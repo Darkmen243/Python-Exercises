@@ -13,12 +13,14 @@ import uuid
 from fastapi import FastAPI, Body, status
 from fastapi.responses import JSONResponse, FileResponse
 from pydantic import BaseModel, ConfigDict
-from routers import security
+from routers import security, items, posts
 
 
 app = FastAPI()
 
 app.include_router(security.router)
+app.include_router(items.router)
+app.include_router(posts.router)
 
 class UserCreate(BaseModel):
     name: str
