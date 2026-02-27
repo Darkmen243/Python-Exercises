@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'Store.User'
 
 # Application definition
 
@@ -79,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'Store',
         'USER': 'postgres',
-        'PASSWORD': 'example password',
+        'PASSWORD': '0451',
         'HOST': 'localhost',
         'PORT': '5432',
     }
