@@ -45,17 +45,15 @@
 Выход:
 57
 '''
-def water_dispenser()-> int:
-    number_of_cycles = int(input())
+def water_dispenser(input_str: str) -> str:
+    lines = input_str.strip().split('\n')
+    n = int(lines[0])
     current_water = 0
     prev_time = 0
-    T = 0
-    V = 0
-    for i in range(0,number_of_cycles):
-        T, V = map(int, input().split())
-        if prev_time>0:
-            current_water = max(current_water - (T - prev_time),0)
-        current_water+=V
-        prev_time =T
-    return current_water
-print(water_dispenser())
+    for i in range(1, n + 1):
+        T, V = map(int, lines[i].split())
+        current_water = max(0, current_water - (T - prev_time))
+        current_water += V
+        prev_time = T
+    
+    return str(current_water)
